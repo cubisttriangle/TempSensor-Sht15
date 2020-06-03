@@ -171,10 +171,10 @@ bool dataReady( short timeoutMs, short timeoutIntervalMs )
   return false;
 }
 
-void getData( short* data, byte* CRC )
+void getData( short* data, byte* crc )
 {
   *data = ( readByte() << 8 ) | readByte();
-  CRC = readByte();
+  *crc = readByte();
 }
 
 byte readByte()
